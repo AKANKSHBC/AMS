@@ -57,8 +57,8 @@ if($_SESSION['name']!='oasis')
 
     <label>Select Subject</label>
     <select name="whichcourse">
-    <option  value="algo">Analysis of Algorithms</option>
-         <option  value="algolab">Analysis of Algorithms Lab</option>
+        <option  value="algo">Analysis of Algorithms</option>
+        <option  value="algolab">Analysis of Algorithms Lab</option>
         <option  value="dbms">Database Management System</option>
         <option  value="dbmslab">Database Management System Lab</option>
         <option  value="weblab">Web Programming Lab</option>
@@ -93,7 +93,7 @@ if($_SESSION['name']!='oasis')
     </select>
     <p>  </p>
       <label>Date ( yyyy-mm-dd )</label>
-      <input type="text" name="date">
+      <input type="date" name="date">
       <input type="submit" name="sr_date" value="Go!" >
     </form>
 
@@ -118,7 +118,7 @@ if($_SESSION['name']!='oasis')
      $sdate = $_POST['date'];
      $course = $_POST['course'];
 
-     $all_query = mysqli_query($con, "select * from attendance where reports.stat_date='$sdate' and reports.course = '$course'");
+     $all_query = mysqli_query($con, "select * from attendance where attendance.stat_date='$sdate' and attendance.course = '$course'");
 
     }
     if(isset($_POST['sr_date'])){
@@ -129,9 +129,9 @@ if($_SESSION['name']!='oasis')
       <thead>
         <tr>
           <th scope="col">Reg. No.</th>
-          <th scope="col">Name</th>
+          <!-- <th scope="col">Name</th>
           <th scope="col">Department</th>
-          <th scope="col">Batch</th>
+          <th scope="col">Batch</th> -->
           <th scope="col">Date</th>
           <th scope="col">Attendance Status</th>
         </tr>
@@ -141,17 +141,17 @@ if($_SESSION['name']!='oasis')
     <?php
 
      $i=0;
-     while ($data = mysqli_fetch_array($db,$all_query)) {
+     while ($data = mysqli_fetch_array($all_query)) {
 
        $i++;
 
      ?>
         <tbody>
            <tr>
-             <td><?php echo $data['st_id']; ?></td>
-             <td><?php echo $data['st_name']; ?></td>
+             <td><?php echo $data['stat_id']; ?></td>
+             <!-- <td><?php echo $data['st_name']; ?></td>
              <td><?php echo $data['st_dept']; ?></td>
-             <td><?php echo $data['st_batch']; ?></td>
+             <td><?php echo $data['st_batch']; ?></td> -->
              <td><?php echo $data['stat_date']; ?></td>
              <td><?php echo $data['st_status']; ?></td>
            </tr>
@@ -182,7 +182,6 @@ if($_SESSION['name']!='oasis')
        }
        while ($data = mysqli_fetch_array($single)) {
        $i++;
-       
        if($i <= 1){
      ?>
 
