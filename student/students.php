@@ -84,7 +84,7 @@ if($_SESSION['name']!='oasis')
 
     if(isset($_POST['sr_btn'])){
      
-     $srbatch = 2020;
+     $srbatch = $_POST['sr_batch'];
      $i=0;
      
      $all_query = mysqli_query($con, "select * from students where students.st_batch = '$srbatch' order by st_id asc");

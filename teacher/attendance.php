@@ -150,7 +150,7 @@ if($_SESSION['name']!='oasis')
 
      $i=0;
      $radio = 0;
-     $batch = 2020;
+     $batch = $_POST['whichbatch'];
      $all_query = mysqli_query($con, "select * from students where st_batch='$batch' order by st_id asc");
 
      while ($data = mysqli_fetch_array($all_query)) {
