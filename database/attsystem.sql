@@ -41,10 +41,9 @@ CREATE TABLE `admininfo` (
 -- Dumping data for table `admininfo`
 --
 
-INSERT INTO `admininfo` (`username`, `password`, `email`, `fname`, `phone`, `type`) VALUES
-('admin', 'admin', 'admin@gmail.com', 'admin', '2147483647', 'admin'),
-('pravesh', 'pravesh', 'rawatpravesh0016@gmail.com', 'Pravesh Rawat', '0992642003', 'student'),
-('sumit', 'sumit', 'sumitbangar59@gmail.com', 'sumit bangar', '988766363', 'teacher');
+-- INSERT INTO `admininfo` (`username`, `password`, `email`, `fname`, `phone`, `type`) VALUES
+-- ('admin', 'admin', 'admin@gmail.com', 'admin', '2147483647', 'admin');
+
 
 -- --------------------------------------------------------
 
@@ -63,10 +62,10 @@ CREATE TABLE `attendance` (
 -- Dumping data for table `attendance`
 --
 
-INSERT INTO `attendance` (`stat_id`, `course`, `st_status`, `stat_date`) VALUES
-('1', 'algo', 'Present', '2018-11-14'),
-('2', 'algo', 'Present', '2018-11-13'),
-('1', 'algo', 'Absent', '2018-11-13');
+-- INSERT INTO `attendance` (`stat_id`, `course`, `st_status`, `stat_date`) VALUES
+-- ('1', 'algo', 'Present', '2018-11-14'),
+-- ('2', 'algo', 'Present', '2018-11-13'),
+-- ('1', 'algo', 'Absent', '2018-11-13');
 
 -- --------------------------------------------------------
 
@@ -102,11 +101,9 @@ CREATE TABLE `students` (
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`st_id`, `st_name`, `st_dept`, `st_batch`, `st_sem`, `st_email`) VALUES
-('1', 'Pravesh', 'CSE', 2020, 2, 'rawatpravesh0016@gmail.com'),
-('2', 'Nitish Sihmar', 'CSE', 2020, 3, 'sihmar.nitish@gmail.com'),
-('3', 'Shivam Singh', 'CSE', 2020, 3, 'shivam@gmail.com'),
-('4', 'Tushar Garg', 'CSE', 2020, 3, 'tushar@gmail.com');
+-- INSERT INTO `students` (`st_id`, `st_name`, `st_dept`, `st_batch`, `st_sem`, `st_email`) VALUES
+-- ('1', 'Pravesh', 'CSE', 2020, 2, 'rawatpravesh0016@gmail.com');
+
 
 -- --------------------------------------------------------
 
@@ -126,8 +123,8 @@ CREATE TABLE `teachers` (
 -- Dumping data for table `teachers`
 --
 
-INSERT INTO `teachers` (`tc_id`, `tc_name`, `tc_dept`, `tc_email`, `tc_course`) VALUES
-('1', 'Sumit Bangar', 'cse', 'sumit@gmail.com', 'SE');
+-- INSERT INTO `teachers` (`tc_id`, `tc_name`, `tc_dept`, `tc_email`, `tc_course`) VALUES
+-- ('1', 'Sumit Bangar', 'cse', 'sumit@gmail.com', 'SE');
 
 --
 -- Indexes for dumped tables
