@@ -90,7 +90,9 @@ catch(Exception $e){
 <!-- Menus started-->
 <header>
 
-  <h1>NITTE Attendance Management System Beta</h1>
+<div class="row nittehead">
+  <img src="../img/logo.png" alt="nitte" width="200px" ><p class="nittep">Attendance Management System Beta</p>
+  </div>
   <div class="navbar">
   <a href="index.php">Home</a>
   <a href="students.php">Students</a>

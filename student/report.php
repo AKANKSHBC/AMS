@@ -38,7 +38,9 @@ if($_SESSION['name']!='oasis')
 <!-- Menus started-->
 <header>
 
-  <h1>NITTE Attendance Management System Beta</h1>
+<div class="row nittehead">
+  <img src="../img/logo.png" alt="nitte" width="200px" ><p class="nittep">Attendance Management System Beta</p>
+  </div>
   <div class="navbar">
   <a href="index.php">Home</a>
   <a href="students.php">Students</a>
@@ -66,7 +68,7 @@ if($_SESSION['name']!='oasis')
     <label  for="input1" class="col-sm-3 control-label">Select Subject</label>
       <div class="col-sm-4">
       <select name="whichcourse" id="input1">
-         <option  value="algo">Database System Models</option>
+         <option  value="DSM">Database System Models</option>
          <option disabled >***Future Courses***</option>
          <!-- <option  value="algolab">Analysis of Algorithms Lab</option>
         <option  value="dbms">Database Management System</option>
@@ -82,12 +84,12 @@ if($_SESSION['name']!='oasis')
 
   </div>
 
-        <!-- <div class="form-group">
+        <div class="form-group">
            <label for="input1" class="col-sm-3 control-label">Your Reg. No.</label>
               <div class="col-sm-7">
                   <input type="text" name="sr_id"  class="form-control" id="input1" placeholder="enter your reg. no." />
               </div>
-        </div> -->
+        </div> 
         <input type="submit" class="btn btn-primary col-md-3 col-md-offset-7" value="Go!" name="sr_btn" />
     </form>
 
@@ -102,7 +104,7 @@ if($_SESSION['name']!='oasis')
     if(isset($_POST['sr_btn'])){
 
     //initializing ID 
-     $sr_id = "1003";
+     $sr_id = $_POST['sr_id'];
      $course = $_POST['whichcourse'];
 
      $i=0;
@@ -129,10 +131,10 @@ if($_SESSION['name']!='oasis')
         
 
      <tbody>
-      <tr>
+      <!-- <tr>
           <td>Registration No.: </td>
           <td><?php echo $data['stat_id']; ?></td>
-      </tr>
+      </tr> -->
 
       <tr>
         <td>Total Class (Days): </td>

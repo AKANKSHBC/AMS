@@ -33,7 +33,9 @@ if($_SESSION['name']!='oasis')
 
 <header>
 
-  <h1>NITTE Attendance Management System Beta</h1>
+<div class="row nittehead">
+  <img src="../img/logo.png" alt="nitte" width="200px" ><p class="nittep">Attendance Management System Beta</p>
+  </div>
   <div class="navbar">
   <a href="index.php">Home</a>
   <a href="students.php">Students</a>
@@ -57,7 +59,7 @@ if($_SESSION['name']!='oasis')
 
     <label>Select Subject</label>
     <select name="whichcourse">
-        <option  value="algo">Database System Models</option>
+        <option  value="DSM">Database System Models</option>
         <option disabled >***Future Courses***</option>
         <!-- <option  value="algolab">Analysis of Algorithms Lab</option>
         <option  value="dbms">Database Management System</option>
@@ -82,7 +84,7 @@ if($_SESSION['name']!='oasis')
 
     <label>Select Subject</label>
     <select name="course">
-    <option  value="algo">Database System Models</option>
+    <option  value="DSM">Database System Models</option>
     <option disabled >***Future Courses***</option>
          <!-- <option  value="algolab">Analysis of Algorithms Lab</option>
         <option  value="dbms">Database Management System</option>
@@ -136,6 +138,7 @@ if($_SESSION['name']!='oasis')
           <th scope="col">Batch</th> -->
           <th scope="col">Date</th>
           <th scope="col">Attendance Status</th>
+          <th scope="col">Period</th>
         </tr>
      </thead>
 
@@ -156,6 +159,7 @@ if($_SESSION['name']!='oasis')
              <td><?php echo $data['st_batch']; ?></td> -->
              <td><?php echo $data['stat_date']; ?></td>
              <td><?php echo $data['st_status']; ?></td>
+             <td><?php echo $data['stat_period']; ?></td>
            </tr>
         </tbody>
 
@@ -189,10 +193,10 @@ if($_SESSION['name']!='oasis')
 
 
      <tbody>
-      <tr>
+      <!-- <tr>
           <td>Student Reg. No: </td>
           <td><?php echo $data['stat_id']; ?></td>
-      </tr>
+      </tr> -->
 
            <?php
          //}

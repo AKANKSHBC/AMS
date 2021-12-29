@@ -9,7 +9,7 @@ header{
 }
 body {
     color: black;/*#dce3ed;*/
-    background-color: white;/*#3e4651;*/
+    background-image: url(../img/bg.jpg);/*#3e4651;*/
     font-family: Arial;
     margin: 0;
 }
@@ -24,21 +24,21 @@ table td button{
 .navbar {
     font-size: 20px;
     overflow: hidden;
-    background-color: #333;
+    background-color: #e6e624;
 }
 
 .navbar a {
     float: left;
     display: block;
-    color: white; /*#dce3ed;*/
+    color: #000; /*#dce3ed;*/
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
 }
 
 .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #eeee6a;
+    color: rgb(79, 85, 0);
 }
 
 
@@ -50,7 +50,7 @@ table td button{
 
 .content {
     flex: 30%;
-    background-color: white; /*#3e4651;*/
+    background-color: transparent; /*#3e4651;*/
     padding: 50px;
 }
 select{
@@ -72,3 +72,12 @@ p{
     height: 200px;
     width: 300px;
 } */
+.nittehead {
+    justify-content: center;
+    align-items: center;
+}
+.nittep {
+    font-size: 32px;
+    font-weight: bold;
+    color:#2e3192;
+}
