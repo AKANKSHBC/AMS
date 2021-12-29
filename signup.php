@@ -2,7 +2,9 @@
 <?php include('connect.php'); ?>
 
 <?php
-
+      if(isset($_POST['back'])){
+        header('location: index.php');
+      }
 
 
   try{
@@ -46,7 +48,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Online Attendance Management System 1.0</title>
+<title>NITTE Attendance Management System Beta</title>
 <meta charset="UTF-8">
   
   <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -65,7 +67,7 @@
 
 <header>
 
-  <h1>Online Attendance Management System 1.0</h1>
+  <h1>NITTE Attendance Management System Beta</h1>
 
 </header>
 <center>
@@ -73,10 +75,7 @@
 <div class="content">
 
   <div class="row">
-    <?php
-    if(isset($success_msg)) echo $success_msg;
-    if(isset($error_msg)) echo $error_msg;
-     ?>
+    
     <!-- Old version started -->
     <!--<form action="" method="post">
       
@@ -124,6 +123,17 @@
     </form>--><!-- Old version ended -->
 
     <form method="post" class="form-horizontal col-md-6 col-md-offset-3">
+
+    <?php
+        if(isset($success_msg)) { ?>
+          <div class="alert alert-success" role="alert">
+              <p style="font-size:24px;"><?php echo $success_msg ?></p>
+          </div>
+    <?php    }
+
+    // if(isset($success_msg)) echo $success_msg;
+    if(isset($error_msg)) echo $error_msg;
+     ?>
 
       <div class="form-group">
           <label for="input1" class="col-sm-3 control-label">Email</label>
@@ -175,8 +185,12 @@
         </label> -->
       </div>
       </div>
+      <div class="form-group">
+          <input type="submit" class="col btn btn-secondary col-md-2 col-md-offset-2" value="Back" name="back" />
 
-      <input type="submit" class="btn btn-primary col-md-2 col-md-offset-8" value="Signup" name="signup" />
+          <input type="submit" class="col btn btn-primary col-md-2 col-md-offset-4" value="Signup" name="signup" />
+      </div>
+      
     </form>
   </div>
     <br>

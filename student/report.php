@@ -15,7 +15,7 @@ if($_SESSION['name']!='oasis')
 
 <!-- head started -->
 <head>
-<title>Online Attendance Management System 1.0</title>
+<title>NITTE Attendance Management System Beta</title>
 <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../css/main.css">
   <!-- Latest compiled and minified CSS -->
@@ -38,7 +38,7 @@ if($_SESSION['name']!='oasis')
 <!-- Menus started-->
 <header>
 
-  <h1>Online Attendance Management System 1.0</h1>
+  <h1>NITTE Attendance Management System Beta</h1>
   <div class="navbar">
   <a href="index.php">Home</a>
   <a href="students.php">Students</a>
@@ -66,27 +66,28 @@ if($_SESSION['name']!='oasis')
     <label  for="input1" class="col-sm-3 control-label">Select Subject</label>
       <div class="col-sm-4">
       <select name="whichcourse" id="input1">
-         <option  value="algo">Analysis of Algorithms</option>
-         <option  value="algolab">Analysis of Algorithms Lab</option>
+         <option  value="algo">Database System Models</option>
+         <option disabled >***Future Courses***</option>
+         <!-- <option  value="algolab">Analysis of Algorithms Lab</option>
         <option  value="dbms">Database Management System</option>
         <option  value="dbmslab">Database Management System Lab</option>
         <option  value="weblab">Web Programming Lab</option>
         <option  value="os">Operating System</option>
         <option  value="oslab">Operating System Lab</option>
         <option  value="obm">Object Based Modeling</option>
-        <option  value="softcomp">Soft Computing</option>
+        <option  value="softcomp">Soft Computing</option> -->
 
       </select>
       </div>
 
   </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
            <label for="input1" class="col-sm-3 control-label">Your Reg. No.</label>
               <div class="col-sm-7">
                   <input type="text" name="sr_id"  class="form-control" id="input1" placeholder="enter your reg. no." />
               </div>
-        </div>
+        </div> -->
         <input type="submit" class="btn btn-primary col-md-3 col-md-offset-7" value="Go!" name="sr_btn" />
     </form>
 
@@ -101,7 +102,7 @@ if($_SESSION['name']!='oasis')
     if(isset($_POST['sr_btn'])){
 
     //initializing ID 
-     $sr_id = $_POST['sr_id'];
+     $sr_id = "1003";
      $course = $_POST['whichcourse'];
 
      $i=0;

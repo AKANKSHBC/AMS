@@ -56,13 +56,19 @@ if(isset($_POST['login']))
 	//end of try-catch
 }
 
+if(isset($_POST['query'])){
+	session_start();
+	$_SESSION['name']="oasis";
+	header('location: queries.php');
+}
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 
-	<title>Online Attendance Management System</title>
+	<title>NITTE Attendance Management System Beta</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
@@ -74,6 +80,10 @@ if(isset($_POST['login']))
 	 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+	<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 
 </head>
 
@@ -82,11 +92,13 @@ if(isset($_POST['login']))
 
 <header>
 
-  <h1>Online Attendance Management System 1.0</h1>
+  <img src="img/logo.png" alt="NITTE"><h1> Attendance Management System </h1>
 
 </header>
 
-<h1>Login</h1>
+<br>
+
+<h2>Login</h2>
 
 <?php
 //printing error message
@@ -173,6 +185,10 @@ if(isset($error_msg))
 <br><br>
 <p><strong>Have forgot your password? <a href="reset.php">Reset here.</a></strong></p>
 <p><strong>If you don't have any account, <a href="signup.php">Signup</a> here</strong></p>
+
+<!-- <form method="post">
+	<input type="submit" class="btn btn-primary col-md-2 col-md-offset-5" value="Queries" name="query" />
+</form> -->
 
 </center>
 </body>

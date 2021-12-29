@@ -13,7 +13,7 @@ if($_SESSION['name']!='oasis')
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Online Attendance Management System 1.0</title>
+<title>NITTE Attendance Management System Beta</title>
 <meta charset="UTF-8">
 
   <link rel="stylesheet" type="text/css" href="../css/main.css">
@@ -33,7 +33,7 @@ if($_SESSION['name']!='oasis')
 
 <header>
 
-  <h1>Online Attendance Management System 1.0</h1>
+  <h1>NITTE Attendance Management System Beta</h1>
   <div class="navbar">
   <a href="index.php">Home</a>
   <a href="students.php">Students</a>
@@ -57,15 +57,16 @@ if($_SESSION['name']!='oasis')
 
     <label>Select Subject</label>
     <select name="whichcourse">
-        <option  value="algo">Analysis of Algorithms</option>
-        <option  value="algolab">Analysis of Algorithms Lab</option>
+        <option  value="algo">Database System Models</option>
+        <option disabled >***Future Courses***</option>
+        <!-- <option  value="algolab">Analysis of Algorithms Lab</option>
         <option  value="dbms">Database Management System</option>
         <option  value="dbmslab">Database Management System Lab</option>
         <option  value="weblab">Web Programming Lab</option>
         <option  value="os">Operating System</option>
         <option  value="oslab">Operating System Lab</option>
         <option  value="obm">Object Based Modeling</option>
-        <option  value="softcomp">Soft Computing</option>
+        <option  value="softcomp">Soft Computing</option> -->
     </select>
 
       <p>  </p>
@@ -81,15 +82,16 @@ if($_SESSION['name']!='oasis')
 
     <label>Select Subject</label>
     <select name="course">
-    <option  value="algo">Analysis of Algorithms</option>
-         <option  value="algolab">Analysis of Algorithms Lab</option>
+    <option  value="algo">Database System Models</option>
+    <option disabled >***Future Courses***</option>
+         <!-- <option  value="algolab">Analysis of Algorithms Lab</option>
         <option  value="dbms">Database Management System</option>
         <option  value="dbmslab">Database Management System Lab</option>
         <option  value="weblab">Web Programming Lab</option>
         <option  value="os">Operating System</option>
         <option  value="oslab">Operating System Lab</option>
         <option  value="obm">Object Based Modeling</option>
-        <option  value="softcomp">Soft Computing</option>
+        <option  value="softcomp">Soft Computing</option> -->
     </select>
     <p>  </p>
       <label>Date ( yyyy-mm-dd )</label>

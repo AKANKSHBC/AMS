@@ -13,7 +13,7 @@ if($_SESSION['name']!='oasis')
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Online Attendance Management System 1.0</title>
+<title>NITTE Attendance Management System Beta</title>
 <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../css/main.css">
   <!-- Latest compiled and minified CSS -->
@@ -34,7 +34,7 @@ if($_SESSION['name']!='oasis')
 
 <header>
 
-  <h1>Online Attendance Management System 1.0</h1>
+  <h1>NITTE Attendance Management System Beta</h1>
   <div class="navbar">
   <a href="index.php">Home</a>
   <a href="students.php">Students</a>

@@ -5,7 +5,7 @@ session_start();
 
 if($_SESSION['name']!='oasis')
 {
-  header('location: login.php');
+  header('location: ../index.php');
 }
 ?>
 
@@ -41,7 +41,7 @@ if($_SESSION['name']!='oasis')
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Online Attendance Management System 1.0</title>
+<title>NITTE Attendance Management System Beta</title>
 <meta charset="UTF-8">
 
   <link rel="stylesheet" type="text/css" href="../css/main.css">
@@ -69,7 +69,7 @@ if($_SESSION['name']!='oasis')
 
 <header>
 
-  <h1>Online Attendance Management System 1.0</h1>
+  <h1>NITTE Attendance Management System Beta</h1>
   <div class="navbar">
   <a href="index.php">Home</a>
   <a href="students.php">Students</a>
@@ -119,15 +119,16 @@ if($_SESSION['name']!='oasis')
 
         <label >Select Subject</label>
               <select name="whichcourse" id="input1">
-              <option  value="algo">Analysis of Algorithms</option>
-         <option  value="algolab">Analysis of Algorithms Lab</option>
+              <option  value="algo">Database System Models</option>
+              <option disabled >***Future Courses***</option>
+         <!-- <option  value="algolab">Analysis of Algorithms Lab</option>
         <option  value="dbms">Database Management System</option>
         <option  value="dbmslab">Database Management System Lab</option>
         <option  value="weblab">Web Programming Lab</option>
         <option  value="os">Operating System</option>
         <option  value="oslab">Operating System Lab</option>
         <option  value="obm">Object Based Modeling</option>
-        <option  value="softcomp">Soft Computing</option>
+        <option  value="softcomp">Soft Computing</option> -->
               </select>
 
       </div>
@@ -137,7 +138,7 @@ if($_SESSION['name']!='oasis')
         <tr>
           <th scope="col">Reg. No.</th>
           <th scope="col">Name</th>
-          <th scope="col">Department</th>
+          <th scope="col">Department</th> 
           <th scope="col">Batch</th>
           <th scope="col">Semester</th>
           <th scope="col">Email</th>
@@ -160,7 +161,7 @@ if($_SESSION['name']!='oasis')
      <tr>
        <td><?php echo $data['st_id']; ?> <input type="hidden" name="stat_id[]" value="<?php echo $data['st_id']; ?>"> </td>
        <td><?php echo $data['st_name']; ?></td>
-       <td><?php echo $data['st_dept']; ?></td>
+       <td><?php echo "INFORMATION SCIENCE" ?></td>
        <td><?php echo $data['st_batch']; ?></td>
        <td><?php echo $data['st_sem']; ?></td>
        <td><?php echo $data['st_email']; ?></td>
