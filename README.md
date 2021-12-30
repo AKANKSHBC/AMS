@@ -1,9 +1,9 @@
 # Attendance Management System
-Technologies used:  HTML5, CSS3, PHP and MySQL.
+Langauges used:  HTML5, CSS3, PHP and MySQL.
 
 
 ## Requirements
-  - PHP 5.3 or higher.
+  - PHP 7.0 or higher.
   - MySQL 5.6 or higher for spatial features in MySQL.
   - XAMPP or WAMP server for localhost. 
 
@@ -18,9 +18,9 @@ Technologies used:  HTML5, CSS3, PHP and MySQL.
 ## Database
 MySQL is used as database. Database design is made easy to understand.
 ## Importing Database
-- Download the given \*attsystem.sql file.
+- Download the given \*attsystem4.sql file.
 - Create a database attsystem
-- Import \*attsystem.sql, if everything Okay then database will be imported.
+- Import \*attsystem4.sql, if everything Okay then database will be imported.
 
 
 ## Tables
@@ -28,4 +28,5 @@ MySQL is used as database. Database design is made easy to understand.
 - teachers
 - students
 - attendance
+- report
 
