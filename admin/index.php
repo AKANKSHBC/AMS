@@ -157,7 +157,7 @@ include('connect.php');
     </form>
 
   </div>
-<br><br><br>
+<br><br>
   <div class="rowtwo" id="teacher">
   
 
@@ -205,9 +205,13 @@ include('connect.php');
 
 
 </div><br>
+
 <!-- Contents, Tables, Forms, Images ended -->
 
 </center>
+<div style="height:400px">
+  .
+</div>
 </body>
 <!-- Body ended  -->
 </html>

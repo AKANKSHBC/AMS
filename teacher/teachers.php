@@ -17,7 +17,7 @@ if($_SESSION['name']!='oasis')
 <title>NITTE Attendance Management System Beta</title>
 <meta charset="UTF-8">
 
-  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
    
@@ -28,6 +28,7 @@ if($_SESSION['name']!='oasis')
    
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
 </style>
 
 </head>
@@ -90,11 +91,72 @@ if($_SESSION['name']!='oasis')
           
     </table>
 
+    
   </div>
 
 </div>
 
 </center>
 
+<div class="query1">
+
+    <form method="post">
+      <input type="submit" class="btn btn-primary col col-md-2" name="query" value="Query">
+    </form>
+<br>
+<br>
+          <?php 
+                if(isset($_POST['query'])) {
+          ?>        
+                
+    <div class="alert alert-success" role="alert">
+      <h4>Code:</h4>
+      <pre>     SELECT * FROM `teachers` WHERE `tc_name` LIKE "p%" AND `tc_course` LIKE "database%";</pre>
+    </div>
+
+    <table class="table table=stripped">
+        <thead>  
+          <tr>
+            <th scope="col">Teacher ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Department</th>
+            <th scope="col">Email</th>
+            <th scope="col">Course</th>
+          </tr>
+        </thead>
+
+      <?php
+
+        $i=0;
+        $tcr_query = mysqli_query($con, "select * from teachers where tc_name like 'p%' and tc_course like 'database%'");
+        while($tcr_data = mysqli_fetch_array($tcr_query)){
+          $i++;
+
+        ?>
+          <tbody>
+              <tr>
+                <td><?php echo $tcr_data['tc_id']; ?></td>
+                <td><?php echo $tcr_data['tc_name']; ?></td>
+                <td><?php echo $tcr_data['tc_dept']; ?></td>
+                <td><?php echo $tcr_data['tc_email']; ?></td>
+                <td><?php echo $tcr_data['tc_course']; ?></td>
+              </tr>
+          </tbody>
+
+          <?php } ?>
+          
+    </table>
+
+
+</div>
+
+<div style="height:300px;">
+  .
+</div>
+<?php
+
+        }
+
+?>
 </body>
 </html>

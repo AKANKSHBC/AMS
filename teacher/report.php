@@ -236,5 +236,74 @@ if($_SESSION['name']!='oasis')
 
 </center>
 
+<div class="query1">
+
+    <form method="post">
+      <input type="submit" class="btn btn-primary col col-md-2" name="spquery" value="Stored Procedure">
+    </form>
+    <br><br>
+
+    <?php 
+                if(isset($_POST['spquery'])) {
+          ?>        
+              
+    <div class="alert alert-success" role="alert">
+      <h4>Code:</h4>
+      <pre>     code to create stored procedure
+        CALL `19is162_det`();
+      </pre>
+    </div>
+
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th scope="col">Reg. No.</th>
+          <!-- <th scope="col">Name</th>
+          <th scope="col">Department</th>
+          <th scope="col">Batch</th> -->
+          <th scope="col">Date</th>
+          <th scope="col">Attendance Status</th>
+          <th scope="col">Period</th>
+        </tr>
+     </thead>
+
+
+    <?php
+
+     $i=0;
+    //  $store_p = mysqli_query($con, "code to create stored procedure");
+     $sp_query = mysqli_query($con , "call 19is162_det ();");
+     while ($data = mysqli_fetch_array($sp_query)) {
+
+       $i++;
+
+     ?>
+        <tbody>
+           <tr>
+             <td><?php echo $data['stat_id']; ?></td>
+             <!-- <td><?php echo $data['st_name']; ?></td>
+             <td><?php echo $data['st_dept']; ?></td>
+             <td><?php echo $data['st_batch']; ?></td> -->
+             <td><?php echo $data['stat_date']; ?></td>
+             <td><?php echo $data['st_status']; ?></td>
+             <td><?php echo $data['stat_period']; ?></td>
+           </tr>
+        </tbody>
+
+     <?php 
+   } 
+  
+     ?>
+     
+    </table>
+
+</div>
+
+<?php
+
+        }
+
+?>
+
 </body>
 </html>

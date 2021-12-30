@@ -112,5 +112,129 @@ if($_SESSION['name']!='oasis')
 
 </center>
 
+<div class="query1">
+
+    <form method="post">
+      <input type="submit" class="btn btn-primary col col-md-2" name="query" value="Query">
+    </form>
+<br>
+<br>
+          <?php 
+                if(isset($_POST['query'])) {
+          ?>        
+                
+    <div class="alert alert-success" role="alert">
+      <h4>Code:</h4>
+      <pre>     SELECT * FROM `students` WHERE `st_name` LIKE "shreyas" AND `st_batch`="2023";</pre>
+    </div>
+
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th scope="col">Registration No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">Department</th>
+          <th scope="col">Batch</th>
+          <th scope="col">Semester</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+
+      <?php
+
+        $i=0;
+        $tcr_query = mysqli_query($con, "select * from students where st_name like 'shreyas' and st_batch='2023'");
+        while($data = mysqli_fetch_array($tcr_query)){
+          $i++;
+
+        ?>
+          <tbody>
+            <tr>
+              <td><?php echo $data['st_id']; ?></td>
+              <td><?php echo $data['st_name']; ?></td>
+              <td><?php echo $data['st_dept']; ?></td>
+              <td><?php echo $data['st_batch']; ?></td>
+              <td><?php echo $data['st_sem']; ?></td>
+              <td><?php echo $data['st_email']; ?></td>
+            </tr>
+          </tbody>
+
+          <?php } ?>
+          
+    </table>
+
+
+</div>
+
+<?php
+
+        }
+
+?>
+
+<div class="query1">
+
+    <form method="post">
+      <input type="submit" class="btn btn-primary col col-md-2" name="query2" value="View Query">
+    </form>
+<br>
+<br>
+          <?php 
+                if(isset($_POST['query2'])) {
+          ?>        
+                
+    <div class="alert alert-success" role="alert">
+      <h4>Code:</h4>
+      <pre>     CREATE ALGORITHM = UNDEFINED VIEW `stud2023` AS SELECT * FROM `students` WHERE `st_name` LIKE "s%" AND `st_batch` LIKE "2023";</pre>
+    </div>
+
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th scope="col">Registration No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">Department</th>
+          <th scope="col">Batch</th>
+          <th scope="col">Semester</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+
+      <?php
+
+        $i=0;
+        $tcr_query = mysqli_query($con, "CREATE ALGORITHM = UNDEFINED VIEW `std2023` AS SELECT * FROM `students` WHERE `st_name` LIKE 's%' AND `st_batch` LIKE '2023'");
+        $s_query = mysqli_query($con, "select * from std2023 ");
+        while($data = mysqli_fetch_array($s_query)){
+          $i++;
+
+        ?>
+          <tbody>
+            <tr>
+              <td><?php echo $data['st_id']; ?></td>
+              <td><?php echo $data['st_name']; ?></td>
+              <td><?php echo $data['st_dept']; ?></td>
+              <td><?php echo $data['st_batch']; ?></td>
+              <td><?php echo $data['st_sem']; ?></td>
+              <td><?php echo $data['st_email']; ?></td>
+            </tr>
+          </tbody>
+
+          <?php } ?>
+          
+    </table>
+
+
+</div>
+
+<div style="height:300px;">
+  .
+</div>
+<?php
+
+        }
+
+?>
+
 </body>
 </html>
